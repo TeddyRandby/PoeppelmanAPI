@@ -4,7 +4,7 @@ module.exports = buildSchema(`
 
   type GameFrame {
 
-    _id: ID!
+    id: ID!
 
     MatchID: String!
 
@@ -37,7 +37,7 @@ module.exports = buildSchema(`
   }
 
   type rootQuery {
-      gameFrames: [GameFrame!]!
+      gameFrames( MatchID: String): [GameFrame!]!
       test: String!
   }
 
