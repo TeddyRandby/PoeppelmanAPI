@@ -2,6 +2,23 @@ const {buildSchema} = require('graphql');
 
 module.exports = buildSchema(`
 
+  input GameQuery {
+
+    RecTeam_Score: String!
+
+    PullTeam_Score: String!
+
+    RecTeam_RecToStartGame: String!
+
+    SecondHalf: String!
+
+    Time_StartofSim: String!
+
+    CapOn: String!
+
+    OLE_Rate: String!
+  }
+
   type GameFrame {
 
     id: ID!
@@ -22,7 +39,7 @@ module.exports = buildSchema(`
 
     RecTeam_RecToStartGame: String!
 
-    firstHalf: String!
+    SecondHalf: String!
 
     Time_StartofSim: String!
 
@@ -37,7 +54,7 @@ module.exports = buildSchema(`
   }
 
   type rootQuery {
-      gameFrames( MatchID: String): [GameFrame!]!
+      poeppelman( gameQuery: GameQuery): [GameFrame!]!
       test: String!
   }
 

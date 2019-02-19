@@ -61,7 +61,7 @@ const gameFrameSchema = new Schema({
   }
 
 }, {
-  collection: 'OLE70'
+  collection: 'CombinedOLE'
 });
 
 module.exports = mongoose.model('gameFrame', gameFrameSchema);

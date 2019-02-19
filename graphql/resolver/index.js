@@ -1,8 +1,8 @@
-const gameFrameResolver = require('./gameFrame');
+const poeppelmanResolver = require('./poeppelman');
 const testResolver = require('./test');
 
 const rootResolver = {
-  ...gameFrameResolver,
+  ...poeppelmanResolver,
   ...testResolver
 
 };
