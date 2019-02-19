@@ -23,7 +23,7 @@ app.use('/api', graphqlHttp({
 
 mongoose
   .connect(
-    'mongodb+srv://admin:raHWgzNKepzPYL4Z@tedrancluster-syqdx.mongodb.net/PoeppelmanSims?retryWrites=true'
+    'mongodb+srv://APIconnection:L4EZApvl8DZYlpUZ@tedrancluster-syqdx.mongodb.net/PoeppelmanSims?retryWrites=true'
   ).then(() => {
     app.listen(port, () => console.log(`Poeppelman Graphql API listening on port ${port}!`))
   })
