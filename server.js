@@ -5,7 +5,7 @@ const { buildSchema } = require('graphql');
 const graphqlSchema = require('./graphql/schema/index');
 const graphqlResolver = require('./graphql/resolver/index');
 const mongoose = require('mongoose');
-const mongoURI = 'mongodb+srv://APIconnection:L4EZApvl8DZYlpUZ@tedrancluster-syqdx.mongodb.net/PoeppelmanSims?retryWrites=true';
+const mongoURI = process.env.MONGODB_URI || "mongodb://APIConnection:daniela12#@ds343895.mlab.com:43895/heroku_1wp0hgxn";
 const port = process.env.PORT || 8000;
 
 
