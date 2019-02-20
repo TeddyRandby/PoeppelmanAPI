@@ -31,3 +31,10 @@ This query requests the RecTeam_Win_Prob, RecTeam_Avg_Score, PullTeam_Win_Prob, 
 from a game with these specifications. All the properties in the gameQuery object are necessary, and the request will not work 
 without them. 
 
+RecTeam_RecToStartGame, SecondHalf, and CapOn should all be a "1" if true, and a "0" if false.
+
+OLE_Rate means Offensive Line Efficiency, and can be either "0.7" or "0.63". This typically corresponds to men's and women's play respectively, but whichever is more appropriate to the game at hand is what should be applied.
+
+Another note is that its important that all the values are strings, and not the integer 1 or 77.
+
+The data is only simulated until 85min (Time_StartofSim) - values above that will not return anything.
