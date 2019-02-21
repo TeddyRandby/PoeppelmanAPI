@@ -14,9 +14,9 @@ const app = express();
 app.use(bodyParser.json());
 
 app.use((req, res, next) => {
-  res.SetHeader('Acccess-Control-Allow-Origin', '*');
-  res.SetHeader('Acccess-Control-Allow-Methods', 'POST,GET,OPTIONS');
-  res.SetHeader('Acccess-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.SetHeader('Access-Control-Allow-Origin', '*');
+  res.SetHeader('Access-Control-Allow-Methods', 'POST,GET,OPTIONS');
+  res.SetHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   if ( req.method === 'OPTIONS' ) {
     res.sendStatus(200);
   }
