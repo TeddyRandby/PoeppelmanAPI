@@ -13,6 +13,15 @@ const app = express();
 
 app.use(bodyParser.json());
 
+app.use((req, res, next) => {
+  res.SetHeader('Acccess-Control-Allow-Origin', '*');
+  res.SetHeader('Acccess-Control-Allow-Methods', 'POST,GET,OPTIONS');
+  res.SetHeader('Acccess-Control-Allow-Headers', 'Content-Type, Authorization');
+  if ( req.method === 'OPTIONS' ) {
+    res.sendStatus(200);
+  }
+  next();
+}
 
 app.use('/api', graphqlHttp({
 
